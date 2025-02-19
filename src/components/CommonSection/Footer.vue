@@ -89,7 +89,7 @@
               <ul class="list-unstyled footer-widget__links">
                 <li><a href="checkout.html">Cookie Policy</a></li>
                 <li><a href="products-right.html">Shop</a></li>
-                <li><a href="login.html">Login</a></li>
+                <li><router-link to="/log-in">Login</router-link></li>
                 <li><a href="about.html">About us</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
               </ul>

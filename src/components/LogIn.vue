@@ -1,0 +1,77 @@
+<template>
+  <AboveHeader />
+  <CommonHeader />
+
+  <section class="page-header">
+    <div class="page-header__shape-left"></div>
+    <div class="page-header__shape-right"></div>
+    <div class="page-header__bg"></div>
+    <!-- /.page-header__bg -->
+    <div class="container">
+      <h2 class="page-header__title bw-split-in-down">Login</h2>
+      <ul class="alefox-breadcrumb list-unstyled">
+        <li><a href="index.html">Home</a></li>
+        <li><span>Login</span></li>
+      </ul>
+      <!-- /.thm-breadcrumb list-unstyled -->
+    </div>
+    <!-- /.container -->
+  </section>
+  <!-- /.page-header -->
+
+  <!-- Login Start -->
+  <section class="login-page">
+    <div class="container">
+      <div class="login-page__wrap">
+        <h3 class="login-page__wrap__title">Login your Account(Admin Only):</h3>
+
+        <form @submit.prevent="LoginForm" class="login-page__form">
+          <div class="login-page__form-input-box">
+            <input
+              v-model="LoginData.email"
+              type="email"
+              placeholder="Username or email address *"
+            />
+          </div>
+          <div class="login-page__form-input-box">
+            <input type="password" placeholder="Password *" />
+          </div>
+          <div class="login-page__check-forgot">
+            <div class="login-page__checked-box">
+              <input type="checkbox" name="save-data" id="save-data" />
+              <label for="save-data"><span></span>Remember Me?</label>
+            </div>
+            <div class="login-page__form-forgot-password">
+              <a href="login.html">Forgot your Passowrd?</a>
+            </div>
+          </div>
+          <button type="submit" class="alefox-btn">
+            <span class="alefox-btn__item"></span>
+            <span class="alefox-btn__item"></span>
+            <span class="alefox-btn__item"></span>
+            <span class="alefox-btn__item"></span>
+            Login
+          </button>
+        </form>
+      </div>
+      <!-- login-form -->
+    </div>
+  </section>
+  <!-- Login End -->
+  <Footer />
+</template>
+
+<script>
+import AboveHeader from "@/components/CommonSection/AboveHeader.vue";
+import CommonHeader from "@/components/CommonSection/CommonHeader.vue";
+import Footer from "@/components/CommonSection/Footer.vue";
+
+export default {
+  name: "LogIn",
+  components: {
+    AboveHeader,
+    CommonHeader,
+    Footer,
+  },
+};
+</script>

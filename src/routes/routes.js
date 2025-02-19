@@ -1,5 +1,6 @@
 import Dashboard from '@/components/Admin/Dashboard.vue';
 import Home from '@/components/Home.vue';
+import LogIn from '@/components/LogIn.vue';
 import ProjectDetails from '@/components/ProjectDetails.vue';
 import ProjectList from '@/components/ProjectList.vue';
 
@@ -27,6 +28,11 @@ const routes = [
     name: 'Dashboard',
     path: '/dashboard',
     component: Dashboard,
+  },
+  {
+    name: 'LogIn',
+    path: '/log-in',
+    component: LogIn,
   }
 
 
