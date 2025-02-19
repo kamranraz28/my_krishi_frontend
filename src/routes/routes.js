@@ -1,3 +1,4 @@
+import Dashboard from '@/components/Admin/Dashboard.vue';
 import Home from '@/components/Home.vue';
 import ProjectDetails from '@/components/ProjectDetails.vue';
 import ProjectList from '@/components/ProjectList.vue';
@@ -22,6 +23,11 @@ const routes = [
     path: '/project-details',
     component: ProjectDetails,
   },
+  {
+    name: 'Dashboard',
+    path: '/dashboard',
+    component: Dashboard,
+  }
 
 
 ];
