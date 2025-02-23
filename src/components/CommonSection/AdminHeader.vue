@@ -333,7 +333,7 @@
                   >
                 </li>
                 <li>
-                  <a href="auth-signin.html" class="dropdown-item"
+                  <a @click="logout" class="dropdown-item"
                     ><i class="feather icon-lock"></i> Lock Screen</a
                   >
                 </li>
@@ -349,5 +349,12 @@
 <script>
 export default {
   name: "AdminHeader",
+  methods: {
+    logout() {
+      localStorage.removeItem("authToken") ||
+        sessionStorage.removeItem("authToken");
+      this.$router.push("/log-in");
+    },
+  },
 };
 </script>
