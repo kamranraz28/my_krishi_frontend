@@ -64,20 +64,20 @@
               </div>
               <!-- slider-text -->
               <div class="main-slider-three__btn">
-                <a href="products.html" class="alefox-btn">
+                <router-link to="/about-us" class="alefox-btn">
                   <span class="alefox-btn__item"></span>
                   <span class="alefox-btn__item"></span>
                   <span class="alefox-btn__item"></span>
                   <span class="alefox-btn__item"></span>
-                  Discover More </a
+                  About Us </router-link
                 ><!-- slider-btn -->
                 <div class="main-slider-three__btn__two">
-                  <a href="contact.html" class="alefox-btn">
+                  <router-link to="/contact-us" class="alefox-btn">
                     <span class="alefox-btn__item"></span>
                     <span class="alefox-btn__item"></span>
                     <span class="alefox-btn__item"></span>
                     <span class="alefox-btn__item"></span>
-                    Contact Now </a
+                    Contact Now </router-link
                   ><!-- slider-btn -->
                 </div>
               </div>
@@ -133,20 +133,20 @@
               </div>
               <!-- slider-text -->
               <div class="main-slider-three__btn">
-                <a href="products.html" class="alefox-btn">
+                <router-link to="/about-us" class="alefox-btn">
                   <span class="alefox-btn__item"></span>
                   <span class="alefox-btn__item"></span>
                   <span class="alefox-btn__item"></span>
                   <span class="alefox-btn__item"></span>
-                  Discover More </a
+                  About Us </router-link
                 ><!-- slider-btn -->
                 <div class="main-slider-three__btn__two">
-                  <a href="contact.html" class="alefox-btn">
+                  <router-link to="/contact-us" class="alefox-btn">
                     <span class="alefox-btn__item"></span>
                     <span class="alefox-btn__item"></span>
                     <span class="alefox-btn__item"></span>
                     <span class="alefox-btn__item"></span>
-                    Contact Now </a
+                    Contact Now </router-link
                   ><!-- slider-btn -->
                 </div>
               </div>
@@ -202,20 +202,20 @@
               </div>
               <!-- slider-text -->
               <div class="main-slider-three__btn">
-                <a href="products.html" class="alefox-btn">
+                <router-link to="/about-us" class="alefox-btn">
                   <span class="alefox-btn__item"></span>
                   <span class="alefox-btn__item"></span>
                   <span class="alefox-btn__item"></span>
                   <span class="alefox-btn__item"></span>
-                  Discover More </a
+                  About Us </router-link
                 ><!-- slider-btn -->
                 <div class="main-slider-three__btn__two">
-                  <a href="contact.html" class="alefox-btn">
+                  <router-link to="/contact-us" class="alefox-btn">
                     <span class="alefox-btn__item"></span>
                     <span class="alefox-btn__item"></span>
                     <span class="alefox-btn__item"></span>
                     <span class="alefox-btn__item"></span>
-                    Contact Now </a
+                    Contact Now </router-link
                   ><!-- slider-btn -->
                 </div>
               </div>

@@ -24,19 +24,20 @@
                   <span class="footer-widget__info__icon"
                     ><i class="icofont-clock-time"></i
                   ></span>
-                  Open Hours of Government: Mon - Fri: 8.00 am. - 6.00 pm.
+                  Open Hours of Government: <br />
+                  Sun - Thu: 10.00 am. - 6.00 pm.
                 </li>
                 <li>
                   <span class="footer-widget__info__icon"
                     ><i class="icofont-location-pin"></i
                   ></span>
-                  13/A, Miranda Halim City .
+                  DOHS, Mirpur, Bangladesh
                 </li>
                 <li>
                   <span class="footer-widget__info__icon"
                     ><i class="icofont-phone"></i
                   ></span>
-                  <a href="tel:09969569535">099 695 695 35</a>
+                  <a href="tel:+8801609758377">+88 01609758377</a>
                 </li>
               </ul>
               <!-- /.list-unstyled -->

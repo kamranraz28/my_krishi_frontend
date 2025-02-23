@@ -1,4 +1,6 @@
+import AboutUsMain from '@/components/AboutUs.vue';
 import Dashboard from '@/components/Admin/Dashboard.vue';
+import ContactUsMain from '@/components/ContactUs.vue';
 import Home from '@/components/Home.vue';
 import LogIn from '@/components/LogIn.vue';
 import ProjectDetails from '@/components/ProjectDetails.vue';
@@ -33,7 +35,19 @@ const routes = [
     name: 'LogIn',
     path: '/log-in',
     component: LogIn,
-  }
+  },
+  {
+    name: 'AboutUsMain',
+    path: '/about-us',
+    component: AboutUsMain,
+  },
+  {
+    name: 'ContactUsMain',
+    path: '/contact-us',
+    component: ContactUsMain,
+  },
+
+
 
 
 ];

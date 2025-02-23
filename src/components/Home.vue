@@ -7,11 +7,10 @@
     <AboutUs />
     <OurNumbers />
     <OurServices2 />
-    <OurClients />
     <Speciality />
     <Timeline />
     <OurProjects />
-    <Testimonial />
+
     <OurProducts />
     <GetinTouch />
     <LatestNews />

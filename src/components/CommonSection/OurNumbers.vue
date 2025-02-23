@@ -8,9 +8,9 @@
           </div>
           <div class="funfact-one__list__content">
             <h5 class="funfact-one__list__number count-box">
-              <span class="count-text" ref="count1">0</span> +
+              <span class="count-text" ref="count1">0</span> M+
             </h5>
-            <p class="funfact-one__list__text">Projects</p>
+            <p class="funfact-one__list__text">Funds Disbursed</p>
           </div>
         </li>
         <li>
@@ -19,9 +19,9 @@
           </div>
           <div class="funfact-one__list__content">
             <h5 class="funfact-one__list__number count-box">
-              <span class="count-text" ref="count2">0</span>+
+              <span class="count-text" ref="count2">0</span>M+
             </h5>
-            <p class="funfact-one__list__text">Investors</p>
+            <p class="funfact-one__list__text">Agricultural Yield</p>
           </div>
         </li>
         <li>
@@ -30,9 +30,9 @@
           </div>
           <div class="funfact-one__list__content">
             <h5 class="funfact-one__list__number count-box">
-              <span class="count-text" ref="count3">0</span> M+
+              <span class="count-text" ref="count3">0</span> K+
             </h5>
-            <p class="funfact-one__list__text">Total Value</p>
+            <p class="funfact-one__list__text">Farmers Financed</p>
           </div>
         </li>
         <li>
@@ -43,7 +43,7 @@
             <h5 class="funfact-one__list__number count-box">
               <span class="count-text" ref="count4">0</span> +
             </h5>
-            <p class="funfact-one__list__text">Visitors/Day</p>
+            <p class="funfact-one__list__text">Operational Zones</p>
           </div>
         </li>
       </ul>
@@ -62,10 +62,10 @@ export default {
   methods: {
     startCounting() {
       const counts = [
-        { ref: this.$refs.count1, stop: 100 },
-        { ref: this.$refs.count2, stop: 900 },
-        { ref: this.$refs.count3, stop: 50 },
-        { ref: this.$refs.count4, stop: 800 },
+        { ref: this.$refs.count1, stop: 4 },
+        { ref: this.$refs.count2, stop: 2 },
+        { ref: this.$refs.count3, stop: 2 },
+        { ref: this.$refs.count4, stop: 30 },
       ];
 
       counts.forEach(({ ref, stop }) => {

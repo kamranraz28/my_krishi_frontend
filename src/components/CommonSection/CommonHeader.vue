@@ -34,6 +34,7 @@
                 <li><a href="reviews.html">Testimonials</a></li>
               </ul>
             </li>
+            <li><router-link to="/contact-us">Contact Us</router-link></li>
           </ul>
         </nav>
 
@@ -47,7 +48,7 @@
             <span></span>
           </div>
 
-          <a href="#" class="search-toggler main-header__search">
+          <!-- <a href="#" class="search-toggler main-header__search">
             <i class="icon-magnifying-glass" aria-hidden="true"></i>
             <span class="sr-only">Search</span>
           </a>
@@ -55,7 +56,7 @@
           <a href="cart.html" class="main-header__cart">
             <i class="icon-shopping-cart" aria-hidden="true"></i>
             <span class="main-header__cart__count">02</span>
-          </a>
+          </a> -->
 
           <div class="main-header__right__border"></div>
           <div class="main-header__call">
@@ -63,8 +64,8 @@
               <span class="icon-phone-call-two"></span>
             </div>
             <div class="main-header__call__title">Requesting a Call:</div>
-            <a class="main-header__call__text" href="tel:88012365499"
-              >+88 0123 654 99</a
+            <a class="main-header__call__text" href="tel:+8801609758377"
+              >+88 01609758377</a
             >
           </div>
         </div>

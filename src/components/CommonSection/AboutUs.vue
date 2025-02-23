@@ -9,9 +9,9 @@
         <div class="col-lg-6">
           <div class="about-three__image wow fadeInLeft" data-wow-delay="200ms">
             <img src="/assets/images/resources/about-3-1.jpg" alt="alefox" />
-            <div class="about-three__image__two">
+            <!-- <div class="about-three__image__two">
               <img src="/assets/images/shapes/about-3-brand.png" alt="alefox" />
-            </div>
+            </div> -->
           </div>
           <!-- /.about-three__image -->
         </div>
@@ -32,43 +32,48 @@
               <!-- /.sec-title__tagline -->
 
               <h3 class="sec-title__title bw-split-in-left">
-                This Organic of Agriculture About Food Market.
+                Empowering Farmers, Connecting Markets, Transforming
+                Agriculture.
               </h3>
               <!-- /.sec-title__title -->
             </div>
             <!-- /.sec-title -->
-            <p class="about-three__content__text">
-              Organic address a range of simply application and infrastructure
-              this of passages of available, but the majority have suffered poor
-              alteration in some form.
-            </p>
             <div class="about-three__content__quote">
               <i class="icon-farmer-two"></i>
-              There are many variations of passages of available but the have
-              suffered alteration in some form.
+              At My Krishi, we are dedicated to transforming agriculture by
+              connecting farmers with the resources, technology, and knowledge
+              they need to thrive. We provide innovative solutions that focus on
+              four core pillars:
             </div>
             <div class="about-three__content__border"></div>
             <ul class="about-three__content__list">
               <li>
-                <span class="icon-check-mark"></span>There are many variations
-                of pass available.
+                <span class="icon-check-mark"></span>We bridge the gap between
+                farmers and investors, offering low-cost funding and better ROI
+                for all.
               </li>
               <li>
-                <span class="icon-check-mark"></span>Organic Return Policy Money
-                back guarantee
+                <span class="icon-check-mark"></span>We connect farmers with top
+                agri input suppliers, improving farming efficiency and crop
+                yields.
               </li>
               <li>
-                <span class="icon-check-mark"></span>Atiam rhoncus sit amet adip
-                scing sed ipsum.
+                <span class="icon-check-mark"></span>We connect farmers directly
+                to end markets, ensuring better prices and returns.
+              </li>
+              <li>
+                <span class="icon-check-mark"></span>We provide farmers with
+                up-to-date market data and modern agricultural knowledge for
+                informed decision-making.
               </li>
             </ul>
-            <a href="about.html" class="alefox-btn">
+            <router-link to="/about-us" class="alefox-btn">
               <span class="alefox-btn__item"></span>
               <span class="alefox-btn__item"></span>
               <span class="alefox-btn__item"></span>
               <span class="alefox-btn__item"></span>
               About More
-            </a>
+            </router-link>
           </div>
           <!-- /.why-choose-two__content -->
         </div>
