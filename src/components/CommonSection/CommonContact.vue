@@ -98,15 +98,19 @@ export default {
         phone: "",
         message: "",
         privacy_policy: false,
+        project_id: "",
       },
     };
+  },
+  mounted() {
+    this.formData.project_id = this.$route.params.id;
   },
   methods: {
     async submitForm() {
       try {
         // Send POST request to your API
         const response = await axios.post(
-          "http://127.0.0.1:8000/api/message",
+          "http://127.0.0.1:8000/api/messages/store",
           this.formData
         );
 

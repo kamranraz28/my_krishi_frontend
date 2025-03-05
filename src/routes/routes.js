@@ -23,8 +23,9 @@ const routes = [
   },
   {
     name: 'ProjectDetails',
-    path: '/project-details',
+    path: '/project-details/:id',
     component: ProjectDetails,
+    props: true,
   },
   {
     name: 'Dashboard',
