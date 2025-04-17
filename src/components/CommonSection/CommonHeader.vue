@@ -9,7 +9,7 @@
         <div class="main-header__logo">
           <router-link to="/">
             <img
-              src="/assets/images/logo-dark.png"
+              src="/assets/images/my-krishi-3.png"
               alt="Alefox HTML"
               width="147"
             />
@@ -64,8 +64,8 @@
               <span class="icon-phone-call-two"></span>
             </div>
             <div class="main-header__call__title">Requesting a Call:</div>
-            <a class="main-header__call__text" href="tel:+8801609758377"
-              >+88 01609758377</a
+            <a class="main-header__call__text" href="tel:+8809678777180"
+              >+8809678777180</a
             >
           </div>
         </div>

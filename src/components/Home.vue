@@ -78,11 +78,11 @@
     <AboutUs />
     <OurNumbers />
     <OurServices2 />
-    <Speciality />
+    <!-- <Speciality /> -->
     <Timeline />
     <OurProjects />
-    <Testimonial />
-    <OurProducts />
+    <!-- <Testimonial /> -->
+    <!-- <OurProducts /> -->
     <GetinTouch />
     <LatestNews />
     <MoreAbout />

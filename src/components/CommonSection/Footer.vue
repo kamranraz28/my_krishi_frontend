@@ -10,11 +10,11 @@
     <div class="main-footer__top">
       <div class="container">
         <div class="row">
-          <div class="col-md-6 col-xl-4">
+          <div class="col-md-6 col-xl-5">
             <div class="footer-widget footer-widget--about">
               <a href="index.html" class="footer-widget__logo">
                 <img
-                  src="/assets/images/logo-light.png"
+                  src="/assets/images/my-krishi-3.png"
                   width="147"
                   alt="Alefox HTML Template"
                 />
@@ -64,35 +64,21 @@
             <!-- /.footer-widget -->
           </div>
           <!-- /.col-md-6 -->
-          <div class="col-md-6 col-xl-3">
-            <div class="footer-widget footer-widget--links">
-              <h2 class="footer-widget__title">Service</h2>
-              <!-- /.footer-widget__title -->
-              <ul class="list-unstyled footer-widget__links">
-                <li><a href="service-d-fresh.html">Always Fresh</a></li>
-                <li><a href="service-d-organic.html">Organic Product</a></li>
-                <li>
-                  <a href="service-d-agriculture.html">Agriculture Staff</a>
-                </li>
-                <li><a href="service-d-growth.html">Growth Providing</a></li>
-                <li><a href="service-d-farming.html">Organic Farming</a></li>
-              </ul>
-              <!-- /.list-unstyled footer-widget__links -->
-            </div>
-          </div>
+
           <!-- /.col-md-6 -->
-          <div class="col-md-6 col-xl-2">
+          <div class="col-md-8 col-xl-3">
             <div
               class="footer-widget footer-widget--links footer-widget--links-two"
             >
               <h2 class="footer-widget__title">Links</h2>
               <!-- /.footer-widget__title -->
               <ul class="list-unstyled footer-widget__links">
-                <li><a href="checkout.html">Cookie Policy</a></li>
-                <li><a href="products-right.html">Shop</a></li>
-                <li><router-link to="/log-in">Login</router-link></li>
-                <li><a href="about.html">About us</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
+                <!-- <li><router-link to="/log-in">Login</router-link></li> -->
+                <li><router-link to="/about-us">About us</router-link></li>
+                <li><router-link to="/contact-us">Contact Us</router-link></li>
+                <li>
+                  <router-link to="/project-list">Our Projects</router-link>
+                </li>
               </ul>
               <!-- /.list-unstyled footer-widget__links -->
             </div>
@@ -137,7 +123,8 @@
       <div class="container">
         <div class="main-footer__bottom__inner">
           <p class="main-footer__copyright">
-            &copy; Copyright <span class="dynamic-year"></span> by Kamran
+            &copy; Copyright <span class="dynamic-year"></span> by Synergy
+            Interface Ltd
           </p>
         </div>
       </div>

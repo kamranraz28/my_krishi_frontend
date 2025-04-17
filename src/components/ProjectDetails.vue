@@ -102,7 +102,7 @@ export default {
     fetchProjectDetails() {
       const projectId = this.$route.params.id; // Get project ID from the URL
       axios
-        .get(`http://127.0.0.1:8000/api/projects/${projectId}`)
+        .get(`${this.$baseURL}/api/projects/${projectId}`)
         .then((response) => {
           if (response.data.status === "success") {
             this.project = response.data.project; // Set the project data
@@ -116,7 +116,7 @@ export default {
         });
     },
     getImageUrl(image) {
-      return `http://127.0.0.1:8000/uploads/projects/${image}`;
+      return `${this.$baseURL}/uploads/projects/${image}`;
     },
   },
 };

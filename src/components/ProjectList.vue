@@ -29,10 +29,12 @@
                 <img
                   :src="getImageUrl(project.details.image)"
                   :alt="project.details.title"
+                  style="width: 400px; height: 250px; object-fit: cover"
                 />
                 <img
                   :src="getImageUrl(project.details.image)"
                   :alt="project.details.title"
+                  style="width: 400px; height: 250px; object-fit: cover"
                 />
                 <router-link
                   :to="`/project-details/${project.id}`"
@@ -98,7 +100,7 @@ export default {
   methods: {
     async fetchProjects() {
       try {
-        const response = await axios.get("http://127.0.0.1:8000/api/projects");
+        const response = await axios.get(`${this.$baseURL}/api/projects`);
         if (response.data.status === "success") {
           this.projects = response.data.project;
         }
@@ -107,7 +109,7 @@ export default {
       }
     },
     getImageUrl(image) {
-      return `http://127.0.0.1:8000/uploads/projects/${image}`;
+      return `${this.$baseURL}/uploads/projects/${image}`;
     },
   },
   mounted() {

@@ -8,7 +8,7 @@
       <div class="row">
         <div class="col-lg-6">
           <div class="about-three__image wow fadeInLeft" data-wow-delay="200ms">
-            <img src="/assets/images/resources/about-3-1.jpg" alt="alefox" />
+            <img src="/assets/images/farmers/farmer-1.jpg" alt="alefox" />
             <!-- <div class="about-three__image__two">
               <img src="/assets/images/shapes/about-3-brand.png" alt="alefox" />
             </div> -->
