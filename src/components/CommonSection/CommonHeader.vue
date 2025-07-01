@@ -6,6 +6,7 @@
   >
     <div class="container-fluid">
       <div class="main-header__inner">
+        <!-- Logo -->
         <div class="main-header__logo">
           <router-link to="/">
             <img
@@ -16,28 +17,16 @@
           </router-link>
         </div>
 
+        <!-- Desktop Nav -->
         <nav class="main-header__nav main-menu">
           <ul class="main-menu__list">
             <li><router-link to="/">Home</router-link></li>
             <li><router-link to="/project-list">Projects</router-link></li>
-            <li class="dropdown">
-              <a href="#">Pages</a>
-              <ul>
-                <li>
-                  <a href="team.html">Our Team</a>
-                  <ul>
-                    <li><a href="team.html">Team Page</a></li>
-                    <li><a href="team-carousel.html">Team Carousel</a></li>
-                    <li><a href="team-details.html">Team Details</a></li>
-                  </ul>
-                </li>
-                <li><a href="reviews.html">Testimonials</a></li>
-              </ul>
-            </li>
             <li><router-link to="/contact-us">Contact Us</router-link></li>
           </ul>
         </nav>
 
+        <!-- Mobile Menu Button -->
         <div class="main-header__right">
           <div
             class="mobile-nav__btn mobile-nav__toggler"
@@ -48,31 +37,39 @@
             <span></span>
           </div>
 
-          <!-- <a href="#" class="search-toggler main-header__search">
-            <i class="icon-magnifying-glass" aria-hidden="true"></i>
-            <span class="sr-only">Search</span>
-          </a>
-
-          <a href="cart.html" class="main-header__cart">
-            <i class="icon-shopping-cart" aria-hidden="true"></i>
-            <span class="main-header__cart__count">02</span>
-          </a> -->
-
           <div class="main-header__right__border"></div>
           <div class="main-header__call">
             <div class="main-header__call__icon">
               <span class="icon-phone-call-two"></span>
             </div>
             <div class="main-header__call__title">Requesting a Call:</div>
-            <a class="main-header__call__text" href="tel:+8809678777180"
-              >+8809678777180</a
-            >
+            <a class="main-header__call__text" href="tel:+8809678777180">
+              +8809678777180
+            </a>
           </div>
         </div>
       </div>
     </div>
+
+    <!-- Mobile Nav Menu -->
+    <div class="mobile-menu" v-if="isMobileNavOpen">
+      <ul class="mobile-menu__list">
+        <li><router-link to="/" @click="toggleMobileNav">Home</router-link></li>
+        <li>
+          <router-link to="/project-list" @click="toggleMobileNav"
+            >Projects</router-link
+          >
+        </li>
+        <li>
+          <router-link to="/contact-us" @click="toggleMobileNav"
+            >Contact Us</router-link
+          >
+        </li>
+      </ul>
+    </div>
   </header>
 </template>
+
 
 
 <!-- <script>
@@ -81,7 +78,7 @@ export default {
 };
 </script> -->
 
-<script>
+<!-- <script>
 export default {
   name: "CommonHeader",
   data() {
@@ -113,9 +110,9 @@ export default {
     },
   },
 };
-</script>
+</script> -->
 
-<style scoped>
+<!-- <style scoped>
 .fixed-header {
   position: fixed;
   top: 0;
@@ -137,6 +134,69 @@ export default {
   to {
     transform: translateY(0);
   }
+}
+</style> -->
+
+
+<script>
+export default {
+  name: "CommonHeader",
+  data() {
+    return {
+      isSticky: false,
+      lastScrollY: 0,
+      isMobileNavOpen: false,
+    };
+  },
+  mounted() {
+    window.addEventListener("scroll", this.handleScroll);
+  },
+  beforeUnmount() {
+    window.removeEventListener("scroll", this.handleScroll);
+  },
+  methods: {
+    handleScroll() {
+      const currentScrollY = window.scrollY;
+      if (currentScrollY < this.lastScrollY && currentScrollY > 100) {
+        this.isSticky = true;
+      } else {
+        this.isSticky = false;
+      }
+      this.lastScrollY = currentScrollY;
+    },
+    toggleMobileNav() {
+      this.isMobileNavOpen = !this.isMobileNavOpen;
+    },
+  },
+};
+</script>
+
+<style>
+.mobile-menu {
+  background-color: #fff;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-menu__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.mobile-menu__list li {
+  margin-bottom: 15px;
+}
+
+.mobile-menu__list a {
+  color: #000;
+  text-decoration: none;
+  font-weight: 500;
 }
 </style>
 
