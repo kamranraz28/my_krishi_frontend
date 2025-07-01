@@ -25,9 +25,9 @@
               <span class="icon-phone-call"></span>
             </div>
             <div class="contact-info__item__content">
-              <h3 class="contact-info__item__title">Call This Now</h3>
+              <h3 class="contact-info__item__title">Call Us Now</h3>
               <p class="contact-info__item__text">
-                <a href="tel:+8801609758377">+88 01609758377</a>
+                <a href="tel:+8809678777180">+8809678777180</a>
               </p>
             </div>
           </div>
@@ -41,7 +41,7 @@
             <div class="contact-info__item__content">
               <h3 class="contact-info__item__title">Mail Us</h3>
               <p class="contact-info__item__text">
-                <a href="mailto:your@gmail.com">your@gmail.com</a>
+                <a href="info@mykrishi.com">info@mykrishi.com</a>
               </p>
             </div>
           </div>
@@ -54,7 +54,7 @@
             </div>
             <div class="contact-info__item__content">
               <h3 class="contact-info__item__title">Our Location</h3>
-              <p class="contact-info__item__text">Mirpur, Dhaka</p>
+              <p class="contact-info__item__text">DOHS, Mirpur, Bangladesh</p>
             </div>
           </div>
           <!-- item -->

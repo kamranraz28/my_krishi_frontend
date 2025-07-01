@@ -79,13 +79,13 @@
     <OurNumbers />
     <OurServices2 />
     <!-- <Speciality /> -->
-    <Timeline />
-    <OurProjects />
+    <!-- <Timeline /> -->
+    <!-- <OurProjects /> -->
     <!-- <Testimonial /> -->
     <!-- <OurProducts /> -->
     <GetinTouch />
-    <LatestNews />
-    <MoreAbout />
+    <!-- <LatestNews /> -->
+    <!-- <MoreAbout /> -->
     <Footer />
   </div>
 </template>

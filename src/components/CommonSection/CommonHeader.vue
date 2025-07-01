@@ -9,9 +9,9 @@
         <div class="main-header__logo">
           <router-link to="/">
             <img
-              src="/assets/images/my-krishi-3.png"
+              src="/assets/images/logo-light-m.jpeg"
               alt="Alefox HTML"
-              width="147"
+              width="180"
             />
           </router-link>
         </div>
@@ -75,13 +75,13 @@
 </template>
 
 
-<script>
+<!-- <script>
 export default {
   name: "CommonHeader",
 };
-</script>
+</script> -->
 
-<!-- <script>
+<script>
 export default {
   name: "CommonHeader",
   data() {
@@ -138,5 +138,5 @@ export default {
     transform: translateY(0);
   }
 }
-</style> -->
+</style>
 

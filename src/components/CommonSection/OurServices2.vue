@@ -18,104 +18,45 @@
             class="sec-title__tagline__left-leaf"
             style="background-image: url(assets/images/shapes/leaf.png)"
           ></span
-          >Our Best Services<span
+          >Our Latest Projects<span
             class="sec-title__tagline__right-leaf"
             style="background-image: url(assets/images/shapes/leaf.png)"
           ></span>
         </h6>
-        <!-- /.sec-title__tagline -->
 
-        <h3 class="sec-title__title bw-split-in-left">Services This Working</h3>
-        <!-- /.sec-title__title -->
+        <h3 class="sec-title__title bw-split-in-left">
+          These are our latest three projects
+        </h3>
       </div>
-      <!-- /.sec-title -->
+
       <div
-        class="service-three__carousel alefox-owl__carousel alefox-owl__carousel--with-shadow alefox-owl__carousel--basic-nav owl-carousel owl-theme"
-        data-owl-options='{
-				"items": 1,
-				"margin": 30,
-				"loop": false,
-				"smartSpeed": 700,
-				"nav": false,
-				"navText": ["<span class=\"icofont-bubble-left\"></span>","<span class=\"icofont-bubble-righ\"></span>"],
-				"dots": true,
-				"autoplay": false,
-				"responsive": {
-					"0": {
-						"items": 1
-					},
-					"768": {
-						"items": 2
-					},
-					"992": {
-						"items": 3
-					}
-				}
-			}'
+        ref="carousel"
+        class="service-three__carousel owl-carousel owl-theme"
       >
-        <div class="item">
+        <div class="item" v-for="project in recentProjects" :key="project.id">
           <div class="service-three__item wow fadeInUp" data-wow-delay="00ms">
             <div class="service-three__item__image">
               <img
-                src="/assets/images/resources/service-3-1.jpg"
-                alt="alefox"
+                :src="getImageUrl(project.details.image)"
+                :alt="project.details.title"
               />
             </div>
             <div class="service-three__item__content">
               <div class="service-three__item__icon">
                 <span class="icon-salad"></span>
               </div>
-              <!-- /.service-icon -->
               <h3 class="service-three__item__title">
-                <a href="service-d-fresh.html">Always Fresh</a>
+                <a href="service-d-fresh.html">{{ project.details.title }}</a>
               </h3>
-              <!-- /.service-title -->
               <p class="service-three__item__text">
-                With schools closed in NSW and Victoria, and childcare workers
-                in Food places.
+                {{ truncateText(project.details.description, 20) }}
               </p>
-              <!-- /.service-text -->
-              <a href="service-d-fresh.html" class="service-three__item__link">
-                <i class="icofont-arrow-up"></i>
-              </a>
-            </div>
-            <div
-              class="service-three__item__shape"
-              style="
-                background-image: url(assets/images/shapes/service-3-shape.png);
-              "
-            ></div>
-          </div>
-          <!-- /.service-item -->
-        </div>
-        <div class="item">
-          <div class="service-three__item wow fadeInUp" data-wow-delay="100ms">
-            <div class="service-three__item__image">
-              <img
-                src="/assets/images/resources/service-3-2.jpg"
-                alt="alefox"
-              />
-            </div>
-            <div class="service-three__item__content">
-              <div class="service-three__item__icon">
-                <span class="icon-management"></span>
-              </div>
-              <!-- /.service-icon -->
-              <h3 class="service-three__item__title">
-                <a href="service-d-farming.html">Organic Solutions</a>
-              </h3>
-              <!-- /.service-title -->
-              <p class="service-three__item__text">
-                With schools closed in NSW and Victoria, and childcare workers
-                in Food places.
-              </p>
-              <!-- /.service-text -->
-              <a
-                href="service-d-farming.html"
+              <router-link
+                :to="`/project-details/${project.id}`"
                 class="service-three__item__link"
               >
                 <i class="icofont-arrow-up"></i>
-              </a>
+              </router-link>
             </div>
             <div
               class="service-three__item__shape"
@@ -124,267 +65,6 @@
               "
             ></div>
           </div>
-          <!-- /.service-item -->
-        </div>
-        <div class="item">
-          <div class="service-three__item wow fadeInUp" data-wow-delay="200ms">
-            <div class="service-three__item__image">
-              <img
-                src="/assets/images/resources/service-3-3.jpg"
-                alt="alefox"
-              />
-            </div>
-            <div class="service-three__item__content">
-              <div class="service-three__item__icon">
-                <span class="icon-agronomy"></span>
-              </div>
-              <!-- /.service-icon -->
-              <h3 class="service-three__item__title">
-                <a href="service-d-organic.html">Organic Product</a>
-              </h3>
-              <!-- /.service-title -->
-              <p class="service-three__item__text">
-                With schools closed in NSW and Victoria, and childcare workers
-                in Food places.
-              </p>
-              <!-- /.service-text -->
-              <a
-                href="service-d-organic.html"
-                class="service-three__item__link"
-              >
-                <i class="icofont-arrow-up"></i>
-              </a>
-            </div>
-            <div
-              class="service-three__item__shape"
-              style="
-                background-image: url(assets/images/shapes/service-3-shape.png);
-              "
-            ></div>
-          </div>
-          <!-- /.service-item -->
-        </div>
-        <div class="item">
-          <div class="service-three__item wow fadeInUp" data-wow-delay="00ms">
-            <div class="service-three__item__image">
-              <img
-                src="/assets/images/resources/service-3-1.jpg"
-                alt="alefox"
-              />
-            </div>
-            <div class="service-three__item__content">
-              <div class="service-three__item__icon">
-                <span class="icon-salad"></span>
-              </div>
-              <!-- /.service-icon -->
-              <h3 class="service-three__item__title">
-                <a href="service-d-fresh.html">Always Fresh</a>
-              </h3>
-              <!-- /.service-title -->
-              <p class="service-three__item__text">
-                With schools closed in NSW and Victoria, and childcare workers
-                in Food places.
-              </p>
-              <!-- /.service-text -->
-              <a href="service-d-fresh.html" class="service-three__item__link">
-                <i class="icofont-arrow-up"></i>
-              </a>
-            </div>
-            <div
-              class="service-three__item__shape"
-              style="
-                background-image: url(assets/images/shapes/service-3-shape.png);
-              "
-            ></div>
-          </div>
-          <!-- /.service-item -->
-        </div>
-        <div class="item">
-          <div class="service-three__item wow fadeInUp" data-wow-delay="100ms">
-            <div class="service-three__item__image">
-              <img
-                src="/assets/images/resources/service-3-2.jpg"
-                alt="alefox"
-              />
-            </div>
-            <div class="service-three__item__content">
-              <div class="service-three__item__icon">
-                <span class="icon-management"></span>
-              </div>
-              <!-- /.service-icon -->
-              <h3 class="service-three__item__title">
-                <a href="service-d-farming.html">Organic Solutions</a>
-              </h3>
-              <!-- /.service-title -->
-              <p class="service-three__item__text">
-                With schools closed in NSW and Victoria, and childcare workers
-                in Food places.
-              </p>
-              <!-- /.service-text -->
-              <a
-                href="service-d-farming.html"
-                class="service-three__item__link"
-              >
-                <i class="icofont-arrow-up"></i>
-              </a>
-            </div>
-            <div
-              class="service-three__item__shape"
-              style="
-                background-image: url(assets/images/shapes/service-3-shape.png);
-              "
-            ></div>
-          </div>
-          <!-- /.service-item -->
-        </div>
-        <div class="item">
-          <div class="service-three__item wow fadeInUp" data-wow-delay="200ms">
-            <div class="service-three__item__image">
-              <img
-                src="/assets/images/resources/service-3-3.jpg"
-                alt="alefox"
-              />
-            </div>
-            <div class="service-three__item__content">
-              <div class="service-three__item__icon">
-                <span class="icon-agronomy"></span>
-              </div>
-              <!-- /.service-icon -->
-              <h3 class="service-three__item__title">
-                <a href="service-d-organic.html">Organic Product</a>
-              </h3>
-              <!-- /.service-title -->
-              <p class="service-three__item__text">
-                With schools closed in NSW and Victoria, and childcare workers
-                in Food places.
-              </p>
-              <!-- /.service-text -->
-              <a
-                href="service-d-organic.html"
-                class="service-three__item__link"
-              >
-                <i class="icofont-arrow-up"></i>
-              </a>
-            </div>
-            <div
-              class="service-three__item__shape"
-              style="
-                background-image: url(assets/images/shapes/service-3-shape.png);
-              "
-            ></div>
-          </div>
-          <!-- /.service-item -->
-        </div>
-        <div class="item">
-          <div class="service-three__item wow fadeInUp" data-wow-delay="00ms">
-            <div class="service-three__item__image">
-              <img
-                src="/assets/images/resources/service-3-1.jpg"
-                alt="alefox"
-              />
-            </div>
-            <div class="service-three__item__content">
-              <div class="service-three__item__icon">
-                <span class="icon-salad"></span>
-              </div>
-              <!-- /.service-icon -->
-              <h3 class="service-three__item__title">
-                <a href="service-d-fresh.html">Always Fresh</a>
-              </h3>
-              <!-- /.service-title -->
-              <p class="service-three__item__text">
-                With schools closed in NSW and Victoria, and childcare workers
-                in Food places.
-              </p>
-              <!-- /.service-text -->
-              <a href="service-d-fresh.html" class="service-three__item__link">
-                <i class="icofont-arrow-up"></i>
-              </a>
-            </div>
-            <div
-              class="service-three__item__shape"
-              style="
-                background-image: url(assets/images/shapes/service-3-shape.png);
-              "
-            ></div>
-          </div>
-          <!-- /.service-item -->
-        </div>
-        <div class="item">
-          <div class="service-three__item wow fadeInUp" data-wow-delay="100ms">
-            <div class="service-three__item__image">
-              <img
-                src="/assets/images/resources/service-3-2.jpg"
-                alt="alefox"
-              />
-            </div>
-            <div class="service-three__item__content">
-              <div class="service-three__item__icon">
-                <span class="icon-management"></span>
-              </div>
-              <!-- /.service-icon -->
-              <h3 class="service-three__item__title">
-                <a href="service-d-farming.html">Organic Solutions</a>
-              </h3>
-              <!-- /.service-title -->
-              <p class="service-three__item__text">
-                With schools closed in NSW and Victoria, and childcare workers
-                in Food places.
-              </p>
-              <!-- /.service-text -->
-              <a
-                href="service-d-farming.html"
-                class="service-three__item__link"
-              >
-                <i class="icofont-arrow-up"></i>
-              </a>
-            </div>
-            <div
-              class="service-three__item__shape"
-              style="
-                background-image: url(assets/images/shapes/service-3-shape.png);
-              "
-            ></div>
-          </div>
-          <!-- /.service-item -->
-        </div>
-        <div class="item">
-          <div class="service-three__item wow fadeInUp" data-wow-delay="200ms">
-            <div class="service-three__item__image">
-              <img
-                src="/assets/images/resources/service-3-3.jpg"
-                alt="alefox"
-              />
-            </div>
-            <div class="service-three__item__content">
-              <div class="service-three__item__icon">
-                <span class="icon-agronomy"></span>
-              </div>
-              <!-- /.service-icon -->
-              <h3 class="service-three__item__title">
-                <a href="service-d-organic.html">Organic Product</a>
-              </h3>
-              <!-- /.service-title -->
-              <p class="service-three__item__text">
-                With schools closed in NSW and Victoria, and childcare workers
-                in Food places.
-              </p>
-              <!-- /.service-text -->
-              <a
-                href="service-d-organic.html"
-                class="service-three__item__link"
-              >
-                <i class="icofont-arrow-up"></i>
-              </a>
-            </div>
-            <div
-              class="service-three__item__shape"
-              style="
-                background-image: url(assets/images/shapes/service-3-shape.png);
-              "
-            ></div>
-          </div>
-          <!-- /.service-item -->
         </div>
       </div>
     </div>
@@ -393,7 +73,85 @@
 </template>
 
 <script>
+import axios from "axios";
+import { nextTick } from "vue";
+
 export default {
   name: "OurServices2",
+
+  data() {
+    return {
+      recentProjects: [],
+      owlInitialized: false,
+    };
+  },
+
+  methods: {
+    async fetchProjects() {
+      try {
+        const response = await axios.get(
+          "https://app.mykrishi.com/api/projects"
+        );
+
+        if (response.data.status === "success") {
+          const allProjects = response.data.project;
+
+          // Sort by created_at DESC and take top 3
+          const sortedProjects = allProjects.sort(
+            (a, b) => new Date(b.created_at) - new Date(a.created_at)
+          );
+
+          this.recentProjects = sortedProjects.slice(0, 3);
+
+          await nextTick();
+          this.initOwlCarousel();
+        }
+      } catch (error) {
+        console.error("Error fetching recent projects:", error);
+      }
+    },
+
+    getImageUrl(image) {
+      return `https://app.mykrishi.com/uploads/projects/${image}`;
+    },
+
+    truncateText(text, wordLimit) {
+      if (!text) return "";
+      const words = text.split(" ");
+      if (words.length <= wordLimit) {
+        return text;
+      }
+      return words.slice(0, wordLimit).join(" ") + "...";
+    },
+
+    initOwlCarousel() {
+      if (this.owlInitialized) {
+        // If already initialized, destroy before re-init (optional)
+        $(this.$refs.carousel).trigger("destroy.owl.carousel");
+        this.owlInitialized = false;
+      }
+
+      $(this.$refs.carousel).owlCarousel({
+        items: 1,
+        margin: 30,
+        loop: false,
+        smartSpeed: 700,
+        nav: false,
+        dots: true,
+        autoplay: false,
+        responsive: {
+          0: { items: 1 },
+          768: { items: 2 },
+          992: { items: 3 },
+        },
+      });
+
+      this.owlInitialized = true;
+    },
+  },
+
+  mounted() {
+    this.fetchProjects();
+  },
 };
 </script>

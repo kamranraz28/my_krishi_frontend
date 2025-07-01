@@ -7,7 +7,7 @@ import router from './routes/routes'; // Import your router
 const app = createApp(App);
 
 // Set global baseURL
-app.config.globalProperties.$baseURL = 'http://192.168.0.131:8000';
+app.config.globalProperties.$baseURL = 'https://app.mykrishi.com';
 
 app.use(createHead()); // Use createHead here
 app.use(router); // Your router setup

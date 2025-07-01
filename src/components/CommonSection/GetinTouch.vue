@@ -14,57 +14,73 @@
           <form
             class="contact-two__form contact-form-validated form-one wow fadeInUp"
             data-wow-duration="1500ms"
-            action="https://bracketweb.com/alefox-html/inc/sendemail.php"
+            @submit.prevent="submitForm"
           >
             <div class="sec-title text-center">
               <h6 class="sec-title__tagline bw-split-in-right">
                 <span
                   class="sec-title__tagline__left-leaf"
                   style="background-image: url(/assets/images/shapes/leaf.png)"
-                ></span
-                >Contact Us<span
+                ></span>
+                Contact Us
+                <span
                   class="sec-title__tagline__right-leaf"
                   style="background-image: url(/assets/images/shapes/leaf.png)"
                 ></span>
               </h6>
-              <!-- /.sec-title__tagline -->
-
               <h3 class="sec-title__title bw-split-in-left">Get in Touch</h3>
-              <!-- /.sec-title__title -->
             </div>
-            <!-- /.sec-title -->
+
             <div class="form-one__group">
               <div class="form-one__control form-one__control--full">
-                <input type="text" name="name" placeholder="Name" />
+                <input
+                  v-model="formData.name"
+                  type="text"
+                  placeholder="Name"
+                  required
+                />
               </div>
-              <!-- /.form-one__control form-one__control--full -->
+
               <div class="form-one__control form-one__control--full">
-                <input type="email" name="email" placeholder="Email" />
+                <input
+                  v-model="formData.email"
+                  type="email"
+                  placeholder="Email"
+                  required
+                />
               </div>
-              <!-- /.form-one__control form-one__control--full -->
+
               <div class="form-one__control form-one__control--full">
-                <input type="text" name="address" placeholder="Address" />
+                <input
+                  v-model="formData.address"
+                  type="text"
+                  placeholder="Address"
+                />
               </div>
-              <!-- /.form-one__control form-one__control--full -->
+
               <div class="form-one__control form-one__control--full">
-                <input type="text" name="phone" placeholder="Phone" />
+                <input
+                  v-model="formData.phone"
+                  type="text"
+                  placeholder="Phone"
+                />
               </div>
-              <!-- /.form-one__control form-one__control--full -->
+
               <div class="form-one__control form-one__control--full">
-                <div class="form-one__control__select">
-                  <label class="sr-only" for="service-select"
-                    >Choose Service</label
-                  >
-                  <!-- /#service-select.sr-only -->
-                  <select class="selectpicker" id="service-select">
-                    <option value="Select service">Choose Service</option>
-                    <option value="Select service 01">Select Service 01</option>
-                    <option value="Select service 02">Select Service 02</option>
-                  </select>
-                </div>
-                <!-- /.main-menu__service -->
+                <textarea
+                  v-model="formData.message"
+                  placeholder="Your Message"
+                  required
+                ></textarea>
               </div>
-              <!-- /.form-one__control form-one__control--full -->
+
+              <div class="form-one__control form-one__control--full">
+                <label class="privacy-policy-checkbox">
+                  <input v-model="formData.privacy_policy" type="checkbox" />
+                  I agree to the <a href="#">privacy policy</a>
+                </label>
+              </div>
+
               <div class="form-one__control form-one__control--full">
                 <button type="submit" class="alefox-btn">
                   <span class="alefox-btn__item"></span>
@@ -74,11 +90,10 @@
                   Send Request
                 </button>
               </div>
-              <!-- /.form-one__control -->
             </div>
-            <!-- /.form-one__group -->
           </form>
         </div>
+
         <div class="col-md-6 col-xl-7 d-flex align-items-center wow fadeInUp">
           <ul class="contact-two__list">
             <li class="contact-two__item">
@@ -86,35 +101,32 @@
                 <span class="icon-phone-call"></span>
               </div>
               <div class="contact-two__item__content">
-                <h3 class="contact-two__item__title">Call This Now</h3>
+                <h3 class="contact-two__item__title">Call Us Now</h3>
                 <p class="contact-two__item__text">
-                  <a href="tel:+044461556695">+044461556695</a>
+                  <a href="tel:+8809678777180">+8809678777180</a>
                 </p>
               </div>
             </li>
-            <!-- item -->
             <li class="contact-two__item">
               <div class="contact-two__item__icon">
                 <span class="icon-email"></span>
               </div>
               <div class="contact-two__item__content">
-                <h3 class="contact-two__item__title">Your Message</h3>
+                <h3 class="contact-two__item__title">Our E-mail</h3>
                 <p class="contact-two__item__text">
-                  <a href="mailto:your@gmail.com">your@gmail.com</a>
+                  <a href="mailto:info@mykrishi.com">info@mykrishi.com</a>
                 </p>
               </div>
             </li>
-            <!-- item -->
             <li class="contact-two__item">
               <div class="contact-two__item__icon">
                 <span class="icon-location"></span>
               </div>
               <div class="contact-two__item__content">
-                <h3 class="contact-two__item__title">Your Location</h3>
-                <p class="contact-two__item__text">13/A, Miranda City</p>
+                <h3 class="contact-two__item__title">Our Location</h3>
+                <p class="contact-two__item__text">DOHS, Mirpur, Bangladesh</p>
               </div>
             </li>
-            <!-- item -->
           </ul>
         </div>
       </div>
@@ -122,9 +134,51 @@
   </section>
 </template>
 
-
 <script>
+import axios from "axios";
+
 export default {
   name: "GetinTouch",
+  data() {
+    return {
+      formData: {
+        name: "",
+        email: "",
+        phone: "",
+        address: "",
+        message: "",
+        privacy_policy: false, // <- Added this
+      },
+    };
+  },
+  methods: {
+    async submitForm() {
+      if (!this.formData.privacy_policy) {
+        alert("You must agree to the privacy policy before submitting.");
+        return;
+      }
+
+      try {
+        const response = await axios.post(
+          this.$baseURL + "/api/contacts/store",
+          this.formData
+        );
+        alert("Message sent successfully!");
+
+        // Reset form
+        this.formData = {
+          name: "",
+          email: "",
+          phone: "",
+          address: "",
+          message: "",
+          privacy_policy: false,
+        };
+      } catch (error) {
+        console.error("There was an error:", error);
+        alert("Failed to send the message.");
+      }
+    },
+  },
 };
 </script>

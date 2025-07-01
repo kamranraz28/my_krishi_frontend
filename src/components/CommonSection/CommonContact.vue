@@ -110,7 +110,7 @@ export default {
       try {
         // Send POST request to your API
         const response = await axios.post(
-          "http://127.0.0.1:8000/api/messages/store",
+          this.$baseURL + "/api/messages/store",
           this.formData
         );
 
