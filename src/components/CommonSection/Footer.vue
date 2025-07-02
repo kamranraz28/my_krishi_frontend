@@ -15,7 +15,7 @@
             <div class="footer-widget footer-widget--about">
               <a href="index.html" class="footer-widget__logo">
                 <img
-                  src="/assets/images/logo-dark-m.jpeg"
+                  src="/assets/images/mk-logo-light.png"
                   width="147"
                   alt="MyKrishi Logo"
                 />
