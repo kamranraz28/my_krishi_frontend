@@ -96,18 +96,73 @@
     </div>
 
     <!-- Mobile Nav Menu -->
+    <!-- Mobile Nav Menu -->
     <div class="mobile-menu" v-if="isMobileNavOpen">
       <ul class="mobile-menu__list">
         <li><router-link to="/" @click="toggleMobileNav">Home</router-link></li>
+
         <li>
           <router-link to="/project-list" @click="toggleMobileNav"
-            >Projects</router-link
+            >All Project</router-link
           >
         </li>
+        <li>
+          <router-link to="/invest-process" @click="toggleMobileNav"
+            >How to Invest</router-link
+          >
+        </li>
+        <li>
+          <router-link to="/partner-with-us" @click="toggleMobileNav"
+            >Partner with Us</router-link
+          >
+        </li>
+        <li>
+          <router-link to="/global-agro-village" @click="toggleMobileNav"
+            >Global Agro Village</router-link
+          >
+        </li>
+
+        <li>
+          <router-link to="/about-us" @click="toggleMobileNav"
+            >Who We Are</router-link
+          >
+        </li>
+        <li>
+          <router-link to="/mission-and-vision" @click="toggleMobileNav"
+            >Mission & Vision</router-link
+          >
+        </li>
+        <li>
+          <router-link to="/our-work" @click="toggleMobileNav"
+            >How We Work</router-link
+          >
+        </li>
+        <li>
+          <router-link to="/our-team" @click="toggleMobileNav"
+            >Our Team</router-link
+          >
+        </li>
+        <li>
+          <router-link to="/global-agro-venture" @click="toggleMobileNav"
+            >Global Agro Venture</router-link
+          >
+        </li>
+        <li>
+          <router-link to="/career" @click="toggleMobileNav"
+            >Career</router-link
+          >
+        </li>
+
         <li>
           <router-link to="/contact-us" @click="toggleMobileNav"
             >Contact Us</router-link
           >
+        </li>
+        <li>
+          <router-link to="/blogs" @click="toggleMobileNav">Blogs</router-link>
+        </li>
+        <li>
+          <router-link to="/faq" @click="toggleMobileNav">FAQ</router-link>
         </li>
       </ul>
     </div>
