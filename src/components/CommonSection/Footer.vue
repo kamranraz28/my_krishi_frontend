@@ -115,9 +115,7 @@
         <div class="main-footer__bottom__inner">
           <p class="main-footer__copyright">
             &copy; Copyright <span class="dynamic-year"></span> by
-            <router-link :to="`https://synergyinterface.com/`">
-              Synergy Interface Ltd.
-            </router-link>
+            <router-link to="/"> My Krishi </router-link>
           </p>
         </div>
       </div>
