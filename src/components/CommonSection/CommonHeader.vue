@@ -87,70 +87,87 @@
               <span class="icon-phone-call-two"></span>
             </div>
             <div class="main-header__call__title">Requesting a Call:</div>
-            <a class="main-header__call__text" href="tel:+8809678777180">
-              +8809678777180
-            </a>
+            <a class="main-header__call__text" href="tel:+8809678777180"
+              >+8809678777180</a
+            >
           </div>
         </div>
       </div>
     </div>
 
     <!-- Mobile Nav Menu -->
-    <!-- Mobile Nav Menu -->
     <div class="mobile-menu" v-if="isMobileNavOpen">
       <ul class="mobile-menu__list">
         <li><router-link to="/" @click="toggleMobileNav">Home</router-link></li>
 
         <li>
-          <router-link to="/project-list" @click="toggleMobileNav"
-            >All Project</router-link
-          >
-        </li>
-        <li>
-          <router-link to="/invest-process" @click="toggleMobileNav"
-            >How to Invest</router-link
-          >
-        </li>
-        <li>
-          <router-link to="/partner-with-us" @click="toggleMobileNav"
-            >Partner with Us</router-link
-          >
-        </li>
-        <li>
-          <router-link to="/global-agro-village" @click="toggleMobileNav"
-            >Global Agro Village</router-link
-          >
+          <div class="mobile-menu__dropdown" @click="toggleSubmenu('projects')">
+            Projects
+            <span class="arrow" :class="{ open: isSubmenuOpen.projects }"
+              >▼</span
+            >
+          </div>
+          <ul v-show="isSubmenuOpen.projects" class="submenu">
+            <li>
+              <router-link to="/project-list" @click="toggleMobileNav"
+                >All Project</router-link
+              >
+            </li>
+            <li>
+              <router-link to="/invest-process" @click="toggleMobileNav"
+                >How to Invest</router-link
+              >
+            </li>
+            <li>
+              <router-link to="/partner-with-us" @click="toggleMobileNav"
+                >Partner with Us</router-link
+              >
+            </li>
+            <li>
+              <router-link to="/global-agro-village" @click="toggleMobileNav"
+                >Global Agro Village</router-link
+              >
+            </li>
+          </ul>
         </li>
 
         <li>
-          <router-link to="/about-us" @click="toggleMobileNav"
-            >Who We Are</router-link
-          >
-        </li>
-        <li>
-          <router-link to="/mission-and-vision" @click="toggleMobileNav"
-            >Mission & Vision</router-link
-          >
-        </li>
-        <li>
-          <router-link to="/our-work" @click="toggleMobileNav"
-            >How We Work</router-link
-          >
-        </li>
-        <li>
-          <router-link to="/our-team" @click="toggleMobileNav"
-            >Our Team</router-link
-          >
-        </li>
-        <li>
-          <router-link to="/global-agro-venture" @click="toggleMobileNav"
-            >Global Agro Venture</router-link
-          >
-        </li>
-        <li>
-          <router-link to="/career" @click="toggleMobileNav"
-            >Career</router-link
-          >
+          <div class="mobile-menu__dropdown" @click="toggleSubmenu('about')">
+            About Us
+            <span class="arrow" :class="{ open: isSubmenuOpen.about }">▼</span>
+          </div>
+          <ul v-show="isSubmenuOpen.about" class="submenu">
+            <li>
+              <router-link to="/about-us" @click="toggleMobileNav"
+                >Who We Are</router-link
+              >
+            </li>
+            <li>
+              <router-link to="/mission-and-vision" @click="toggleMobileNav"
+                >Mission & Vision</router-link
+              >
+            </li>
+            <li>
+              <router-link to="/our-work" @click="toggleMobileNav"
+                >How We Work</router-link
+              >
+            </li>
+            <li>
+              <router-link to="/our-team" @click="toggleMobileNav"
+                >Our Team</router-link
+              >
+            </li>
+            <li>
+              <router-link to="/global-agro-venture" @click="toggleMobileNav"
+                >Global Agro Venture</router-link
+              >
+            </li>
+            <li>
+              <router-link to="/career" @click="toggleMobileNav"
+                >Career</router-link
+              >
+            </li>
+          </ul>
         </li>
 
         <li>
@@ -177,6 +194,10 @@ export default {
       isSticky: false,
       lastScrollY: 0,
       isMobileNavOpen: false,
+      isSubmenuOpen: {
+        projects: false,
+        about: false,
+      },
     };
   },
   mounted() {
@@ -188,15 +209,18 @@ export default {
   methods: {
     handleScroll() {
       const currentScrollY = window.scrollY;
-      if (currentScrollY < this.lastScrollY && currentScrollY > 100) {
-        this.isSticky = true;
-      } else {
-        this.isSticky = false;
-      }
+      this.isSticky = currentScrollY < this.lastScrollY && currentScrollY > 100;
       this.lastScrollY = currentScrollY;
     },
     toggleMobileNav() {
       this.isMobileNavOpen = !this.isMobileNavOpen;
+      if (!this.isMobileNavOpen) {
+        this.isSubmenuOpen.projects = false;
+        this.isSubmenuOpen.about = false;
+      }
+    },
+    toggleSubmenu(menu) {
+      this.isSubmenuOpen[menu] = !this.isSubmenuOpen[menu];
     },
   },
 };
@@ -220,18 +244,6 @@ export default {
   transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
 }
 
-/* Optional smooth initial animation */
-@keyframes slideDown {
-  from {
-    transform: translateY(-100%);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
 .mobile-menu {
   background-color: #fff;
   position: absolute;
@@ -250,12 +262,38 @@ export default {
 }
 
 .mobile-menu__list li {
-  margin-bottom: 15px;
+  margin-bottom: 2px;
 }
 
 .mobile-menu__list a {
   color: #000;
   text-decoration: none;
   font-weight: 500;
+}
+
+.mobile-menu__dropdown {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.submenu {
+  list-style: none;
+  padding-left: 15px;
+  margin: 5px 0 10px;
+}
+
+.submenu li {
+  margin-bottom: 2px;
+}
+
+.arrow {
+  transition: transform 0.3s ease;
+}
+
+.arrow.open {
+  transform: rotate(180deg);
 }
 </style>

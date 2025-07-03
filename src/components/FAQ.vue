@@ -14,12 +14,14 @@
         </ul>
       </div>
     </section>
+    <CommonFaq />
     <Footer />
   </div>
 </template>
 
 <script>
 import AboveHeader from "@/components/CommonSection/AboveHeader.vue";
+import CommonFaq from "@/components/CommonSection/CommonFaq.vue";
 import CommonHeader from "@/components/CommonSection/CommonHeader.vue";
 import Footer from "@/components/CommonSection/Footer.vue";
 
@@ -29,6 +31,7 @@ export default {
     AboveHeader,
     CommonHeader,
     Footer,
+    CommonFaq,
   },
 };
 </script>

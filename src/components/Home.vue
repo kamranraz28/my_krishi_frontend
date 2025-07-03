@@ -74,6 +74,7 @@
         </div>
       </div>
     </section>
+
     <OurServices />
     <AboutUs />
     <OurNumbers />
@@ -86,6 +87,7 @@
     <GetinTouch />
     <!-- <LatestNews /> -->
     <!-- <MoreAbout /> -->
+
     <Footer />
   </div>
 </template>
