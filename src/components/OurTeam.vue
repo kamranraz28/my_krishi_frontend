@@ -24,15 +24,12 @@
               data-wow-delay="000ms"
             >
               <div class="team-card__image">
-                <img
-                  src="/assets/images/team/team-1-1.jpg"
-                  alt="Sonia Garcia"
-                />
+                <img src="/assets/images/team/miran.jpeg" alt="Sonia Garcia" />
               </div>
               <!-- /.team-card__image -->
               <div class="team-card__content">
                 <h3 class="team-card__title">
-                  <a href="team-details.html">Sonia Garcia</a>
+                  <a href="team-details.html">Mashiur Rahman</a>
                 </h3>
                 <!-- /.team-card__title -->
                 <p class="team-card__designation">Founder</p>
